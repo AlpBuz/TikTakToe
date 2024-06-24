@@ -23,7 +23,10 @@ def buttonClick(row, col):
             messagebox.showinfo("Game Over", "It's a draw!")
             resetBoard()
         else:
-            currentPlayer = "O" if currentPlayer == "X" else "X"
+            if currentPlayer == "X":
+                currentPlayer = "O"
+            else:
+                currentPlayer == "X"
     else:
         messagebox.showwarning("Invalid Move", "This spot is already taken!")
 
