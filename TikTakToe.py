@@ -4,10 +4,6 @@ from tkinter import messagebox
 root = tk.Tk()
 root.title("Tic-Tac-Toe")
 
-# Initialize the game board
-board = [[" " for _ in range(3)] for _ in range(3)]
-buttons = [[None for _ in range(3)] for _ in range(3)]
-currentPlayer = "X"
 
 def buttonClick(row, col):
     global currentPlayer
@@ -26,7 +22,7 @@ def buttonClick(row, col):
             if currentPlayer == "X":
                 currentPlayer = "O"
             else:
-                currentPlayer == "X"
+                currentPlayer = "X"
     else:
         messagebox.showwarning("Invalid Move", "This spot is already taken!")
 
@@ -63,6 +59,14 @@ def resetBoard():
     for row in range(3):
         for col in range(3):
             buttons[row][col].config(text=" ")
+
+
+
+# Initialize the game board
+board = [[" " for _ in range(3)] for _ in range(3)]
+buttons = [[" " for _ in range(3)] for _ in range(3)]
+currentPlayer = "X"
+
 
 for row in range(3):
     for col in range(3):
